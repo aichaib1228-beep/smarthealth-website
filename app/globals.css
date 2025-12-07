@@ -1,11 +1,25 @@
-/* Global Styles for SmartHealth by Dr. Aicha */
+/* GLOBAL STYLING – SMARTHEALTH */
 
-body {
+/* Basic reset */
+* {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-  background-color: #f8f9fb;
-  color: #222;
+  box-sizing: border-box;
+}
+
+/* Font */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ffffff;
+  color: #333;
+  line-height: 1.7;
+}
+
+/* Headings */
+h1, h2, h3, h4 {
+  font-weight: bold;
+  color: #0077B6;
+  margin-bottom: 15px;
 }
 
 /* Links */
@@ -13,23 +27,62 @@ a {
   color: #0077B6;
   text-decoration: none;
 }
+
 a:hover {
-  opacity: 0.8;
+  text-decoration: underline;
 }
 
-/* Layout basics */
+/* Containers */
+section {
+  margin-bottom: 30px;
+}
+
+/* Buttons */
+button,
+a.button {
+  background-color: #0077B6;
+  color: white !important;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover,
+a.button:hover {
+  background-color: #005f8c;
+}
+
+/* Layout spacing */
 main {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 40px 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
-/* Headings */
-h1 {
-  color: #0077B6;
-  margin-bottom: 12px;
+/* Footer */
+footer {
+  margin-top: 40px;
 }
-h2, h3 {
-  margin-top: 30px;
-  margin-bottom: 12px;
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+
+  body {
+    padding-bottom: 40px;
+  }
+
+  h1 {
+    font-size: 1.9rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
 }
