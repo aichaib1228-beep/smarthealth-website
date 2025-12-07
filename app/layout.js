@@ -1,14 +1,17 @@
+import "./globals.css";
+
 export const metadata = {
-  title: "SmartHealth by Dr. Aicha — Privat allmennlege i Oslo",
+  title: "SmartHealth by Dr. Aicha – Privat allmennlege i Oslo",
   description:
-    "Kvinnehelse, allergi, hormoner og allmennmedisin — i hjertet av Oslo. Bestill time enkelt og raskt hos SmartHealth by Dr. Aicha.",
+    "Kvinnehelse • allergi • hormoner • allmennmedisin. Moderne privatklinikk i Oslo med personlig og faglig trygg oppfølging.",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="no">
       <head>
-        {/* GOOGLE ANALYTICS */}
+
+        {/* Google Analytics */}
         <script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-SL1SD6TL1Q"
@@ -19,12 +22,12 @@ export default function RootLayout({ children }) {
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', 'G-SL1SD6TL1Q', { page_path: window.location.pathname });
+              gtag('config', 'G-SL1SD6TL1Q');
             `,
           }}
         />
 
-        {/* META PIXEL */}
+        {/* Meta Pixel (Facebook) */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -43,9 +46,7 @@ export default function RootLayout({ children }) {
         />
       </head>
 
-      <body>
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
