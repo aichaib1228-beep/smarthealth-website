@@ -1,57 +1,130 @@
+import "./globals.css";
+
 export const metadata = {
-  title: "SmartHealth by Dr. Aicha — Privat allmennlege i Oslo",
-  description: "Kvinnehelse, allergi, hormoner og allmennmedisin — i hjertet av Oslo",
+  title: "SmartHealth by Dr. Aicha",
+  description: "Privat allmennlege i Oslo – kvinnehelse, hormoner, allergi og moderne helsetjenester.",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="no">
-      <head>
-
-        {/* Google Analytics */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-SL1SD6TL1Q"></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-SL1SD6TL1Q');
-            `,
+      <body
+        style={{
+          fontFamily: "Arial, sans-serif",
+          margin: 0,
+          padding: 0,
+          backgroundColor: "#FFFFFF",
+          color: "#333",
+        }}
+      >
+        {/* HEADER */}
+        <header
+          style={{
+            backgroundColor: "#FFFFFF",
+            borderBottom: "3px solid #0077B6",
+            padding: "15px 20px",
+            position: "sticky",
+            top: 0,
+            zIndex: 1000,
           }}
-        />
+        >
+          <div
+            style={{
+              maxWidth: "1100px",
+              margin: "0 auto",
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+            }}
+          >
+            {/* LOGO / NAVN */}
+            <a
+              href="/"
+              style={{
+                fontSize: "1.6rem",
+                fontWeight: "bold",
+                color: "#0077B6",
+                textDecoration: "none",
+              }}
+            >
+              SmartHealth
+            </a>
 
-        {/* Meta Pixel */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              !function(f,b,e,v,n,t,s)
-              {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-              n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-              if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-              n.queue=[];t=b.createElement(e);t.async=!0;
-              t.src=v;s=b.getElementsByTagName(e)[0];
-              s.parentNode.insertBefore(t,s)}(window, document,'script',
-              'https://connect.facebook.net/en_US/fbevents.js');
-              fbq('init', '2038985549549389');
-              fbq('track', 'PageView');
-            `,
+            {/* MENY */}
+            <nav style={{ display: "flex", gap: "20px" }}>
+              <a href="/" style={navStyle}>Hjem</a>
+              <a href="/about" style={navStyle}>Om</a>
+              <a href="/services" style={navStyle}>Tjenester</a>
+              <a href="/contact" style={navStyle}>Kontakt</a>
+              <a
+                href="https://smarthealthbydraicha.makeplans.com"
+                style={{
+                  padding: "8px 14px",
+                  backgroundColor: "#0077B6",
+                  color: "#fff",
+                  borderRadius: "6px",
+                  textDecoration: "none",
+                  fontWeight: "bold",
+                }}
+              >
+                Bestill time
+              </a>
+            </nav>
+          </div>
+        </header>
+
+        {/* SIDEINNHOLD */}
+        <div style={{ minHeight: "70vh" }}>{children}</div>
+
+        {/* FOOTER */}
+        <footer
+          style={{
+            backgroundColor: "#F9F4EF",
+            padding: "40px 20px",
+            marginTop: "40px",
+            borderTop: "3px solid #0077B6",
           }}
-        />
+        >
+          <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
+            <h3 style={{ color: "#0077B6", marginBottom: "10px" }}>
+              SmartHealth by Dr. Aicha
+            </h3>
 
-        {/* Meta Pixel NoScript Backup */}
-        <noscript>
-          <img
-            height="1"
-            width="1"
-            style={{ display: "none" }}
-            src="https://www.facebook.com/tr?id=2038985549549389&ev=PageView&noscript=1"
-          />
-        </noscript>
+            <p>
+              Stensgata 2, 0358 Oslo <br />
+              Telefon: 97 25 20 42 <br />
+              E-post: info@draicha.no
+            </p>
 
-      </head>
+            <a
+              href="https://smarthealthbydraicha.makeplans.com"
+              style={{
+                display: "inline-block",
+                marginTop: "15px",
+                backgroundColor: "#0077B6",
+                color: "white",
+                padding: "12px 20px",
+                borderRadius: "6px",
+                textDecoration: "none",
+                fontWeight: "bold",
+              }}
+            >
+              Bestill time
+            </a>
 
-      <body>{children}</body>
+            <p style={{ marginTop: "20px", fontSize: "0.9rem", color: "#777" }}>
+              © {new Date().getFullYear()} SmartHealth by Dr. Aicha – Alle rettigheter forbeholdt.
+            </p>
+          </div>
+        </footer>
+      </body>
     </html>
   );
 }
+
+const navStyle = {
+  color: "#0077B6",
+  textDecoration: "none",
+  fontWeight: "bold",
+  fontSize: "1rem",
+};
