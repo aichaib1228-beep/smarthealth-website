@@ -37,7 +37,7 @@ export default function RootLayout({ children }) {
               alignItems: "center",
             }}
           >
-            {/* LOGO / NAVN */}
+            {/* Logo / Brand */}
             <a
               href="/"
               style={{
@@ -50,12 +50,13 @@ export default function RootLayout({ children }) {
               SmartHealth
             </a>
 
-            {/* MENY */}
+            {/* Meny */}
             <nav style={{ display: "flex", gap: "20px" }}>
               <a href="/" style={navStyle}>Hjem</a>
               <a href="/about" style={navStyle}>Om</a>
               <a href="/services" style={navStyle}>Tjenester</a>
               <a href="/contact" style={navStyle}>Kontakt</a>
+
               <a
                 href="https://smarthealthbydraicha.makeplans.com"
                 style={{
@@ -73,8 +74,10 @@ export default function RootLayout({ children }) {
           </div>
         </header>
 
-        {/* SIDEINNHOLD */}
-        <div style={{ minHeight: "70vh" }}>{children}</div>
+        {/* Sideinnhold */}
+        <main style={{ minHeight: "70vh", paddingTop: "20px" }}>
+          {children}
+        </main>
 
         {/* FOOTER */}
         <footer
@@ -112,7 +115,13 @@ export default function RootLayout({ children }) {
               Bestill time
             </a>
 
-            <p style={{ marginTop: "20px", fontSize: "0.9rem", color: "#777" }}>
+            <p
+              style={{
+                marginTop: "20px",
+                fontSize: "0.9rem",
+                color: "#777",
+              }}
+            >
               © {new Date().getFullYear()} SmartHealth by Dr. Aicha – Alle rettigheter forbeholdt.
             </p>
           </div>
