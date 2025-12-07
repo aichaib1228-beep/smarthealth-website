@@ -1,9 +1,6 @@
-import "./globals.css";
-
 export const metadata = {
-  title: "SmartHealth by Dr. Aicha – Privat allmennlege i Oslo",
-  description:
-    "Kvinnehelse • allergi • hormoner • allmennmedisin. Moderne privatklinikk i Oslo med personlig og faglig trygg oppfølging.",
+  title: "SmartHealth by Dr. Aicha — Privat allmennlege i Oslo",
+  description: "Kvinnehelse, allergi, hormoner og allmennmedisin — i hjertet av Oslo",
 };
 
 export default function RootLayout({ children }) {
@@ -12,10 +9,7 @@ export default function RootLayout({ children }) {
       <head>
 
         {/* Google Analytics */}
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-SL1SD6TL1Q"
-        ></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-SL1SD6TL1Q"></script>
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -27,7 +21,7 @@ export default function RootLayout({ children }) {
           }}
         />
 
-        {/* Meta Pixel (Facebook) */}
+        {/* Meta Pixel */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -44,6 +38,17 @@ export default function RootLayout({ children }) {
             `,
           }}
         />
+
+        {/* Meta Pixel NoScript Backup */}
+        <noscript>
+          <img
+            height="1"
+            width="1"
+            style={{ display: "none" }}
+            src="https://www.facebook.com/tr?id=2038985549549389&ev=PageView&noscript=1"
+          />
+        </noscript>
+
       </head>
 
       <body>{children}</body>
