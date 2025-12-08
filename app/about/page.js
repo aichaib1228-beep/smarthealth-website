@@ -1,15 +1,26 @@
+import Image from 'next/image'; // Viktig: Importer Image fra Next.js
+
 export default function About() {
   return (
     <main className="about-page-main">
-      <h1 className="about-title">
-        Om Dr. Aicha
-      </h1>
+      <h1 className="about-title">Om Dr. Aicha – Din Privatlege i Oslo</h1>
+      
+      {/* BILDE AV LEGEN LAGT TIL HER */}
+      <div className="doctor-image-container">
+        <Image 
+          src="/dr_aicha_profile.jpg" 
+          alt="Portrett av Dr. Aicha Ibrahim Aibo, Allmennlege" 
+          width={300} 
+          height={400} 
+          className="doctor-profile-image"
+        />
+      </div>
 
       <p className="about-paragraph">
         Dr. Aicha Ibrahim Aibo er allmennlege med bred internasjonal erfaring og
         spisskompetanse innen kvinnehelse, hormonelle plager, allergi og astma.
         Hun kombinerer klassisk medisin med moderne, helhetlige vurderinger for å gi
-        trygg, personlig og oppdatert behandling.
+        trygg, personlig og oppdatert behandling, **med god tid**.
       </p>
 
       <p className="about-paragraph">
@@ -18,7 +29,6 @@ export default function About() {
         språk (norsk, engelsk, spansk, arabisk og somali).
       </p>
 
-      {/* Bruk en mer beskrivende H2 for SEO */}
       <h2 className="about-section-heading">
         Spesialfelt og Faglige interesseområder
       </h2>
