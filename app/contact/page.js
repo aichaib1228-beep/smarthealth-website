@@ -1,23 +1,14 @@
 export default function Contact() {
-  const section = { marginBottom: "25px", lineHeight: "1.7" };
-  const titleStyle = { fontSize: "1.6rem", color: "#0077B6", marginBottom: "8px" };
-
   return (
-    <main style={{ maxWidth: "800px", margin: "0 auto", padding: "40px 20px" }}>
-      <h1
-        style={{
-          fontSize: "2.3rem",
-          color: "#0077B6",
-          fontWeight: "bold",
-          marginBottom: "30px",
-        }}
-      >
+    <main className="contact-page-main">
+      <h1 className="contact-title">
         Kontakt & Adresse
       </h1>
 
-      <section style={section}>
-        <h2 style={titleStyle}>Adresse</h2>
-        <p>
+      {/* ADRESSE */}
+      <section className="contact-section">
+        <h2 className="contact-section-title">Adresse</h2>
+        <p className="contact-details">
           SmartHealth by Dr. Aicha <br />
           Stensgata 2 <br />
           0358 Oslo <br />
@@ -25,52 +16,53 @@ export default function Contact() {
         </p>
       </section>
 
-      <section style={section}>
-        <h2 style={titleStyle}>Åpningstider</h2>
-        <p>
+      {/* ÅPNINGSTIDER */}
+      <section className="contact-section">
+        <h2 className="contact-section-title">Åpningstider</h2>
+        {/* Utvidede åpningstider er et konkurransefortrinn, bra å fremheve */}
+        <p className="contact-details">
           Mandag–Fredag: 08.00 – 20.00 <br />
-          Lørdag: 11.00 - 20.00 <br />
+          Lørdag: 11.00 – 20.00 <br />
           Søndag: Stengt
         </p>
       </section>
 
-      <section style={section}>
-        <h2 style={titleStyle}>Kontakt</h2>
-        <p>
-          Telefon: <a href="tel:+4797252042">97 25 20 42</a> <br />
+      {/* KONTAKT */}
+      <section className="contact-section">
+        <h2 className="contact-section-title">Kontakt</h2>
+        <p className="contact-details">
+          {/* Sørg for at du bruker riktig landskode (+47) i tel:-lenken */}
+          Telefon: <a href="tel:+4797252042" className="contact-link">97 25 20 42</a> <br />
           SMS: 97 25 20 42 <br />
-          E-post: <a href="mailto:info@draicha.no">info@draicha.no</a>
+          E-post: <a href="mailto:info@draicha.no" className="contact-link">info@draicha.no</a>
         </p>
       </section>
 
-      <section style={section}>
-        <h2 style={titleStyle}>Bestill time</h2>
+      {/* BESTILL TIME (CTA) */}
+      <section className="contact-section">
+        <h2 className="contact-section-title">Bestill time</h2>
         <a
           href="https://smarthealthbydraicha.makeplans.com"
-          style={{
-            display: "inline-block",
-            backgroundColor: "#0077B6",
-            color: "white",
-            padding: "12px 20px",
-            borderRadius: "8px",
-            textDecoration: "none",
-            fontWeight: "bold",
-          }}
+          className="primary-button"
+          target="_blank" 
+          rel="noopener noreferrer"
         >
-          Bestill time
+          Bestill time nå
         </a>
       </section>
 
-      <section style={{ marginTop: "40px" }}>
-        <h2 style={titleStyle}>Kart</h2>
-        <div style={{ borderRadius: "10px", overflow: "hidden" }}>
+      {/* KART */}
+      <section className="map-section">
+        <h2 className="contact-section-title">Kart og Veibeskrivelse</h2>
+        <div className="map-container">
+          {/* !!! VIKTIG FIKS: Erstatt kilde med et faktisk Google Maps Iframe-embed: */}
           <iframe
-            src="https://www.google.com/maps?q=Stensgata+2,+Oslo&output=embed"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1999.6480584733732!2d10.72580715104439!3d59.93299748174542!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46416e771c080001%3A0x1d5f2f5c7e099824!2sStensgata%202%2C%200358%20Oslo!5e0!3m2!1sno!2sno!4v1701890123456" 
             width="100%"
             height="350"
-            style={{ border: 0 }}
             allowFullScreen=""
             loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
       </section>
