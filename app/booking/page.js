@@ -1,44 +1,31 @@
+// Bruk <Link> hvis du ønsker å holde deg innenfor Next.js-navigasjonen
+import Link from 'next/link'; 
+
 export default function Booking() {
   return (
-    <main
-      style={{
-        maxWidth: "800px",
-        margin: "0 auto",
-        padding: "40px 20px",
-        textAlign: "center",
-      }}
-    >
-      <h1
-        style={{
-          fontSize: "2.3rem",
-          color: "#0077B6",
-          fontWeight: "bold",
-          marginBottom: "20px",
-        }}
-      >
+    <main className="booking-page-main">
+      <h1 className="booking-title">
         Bestill time
       </h1>
 
-      <p style={{ fontSize: "1.2rem", lineHeight: "1.7", marginBottom: "30px" }}>
-        Du kan enkelt bestille time via vårt digitale bookingsystem.  
+      <p className="booking-intro-text">
+        Du kan enkelt bestille time via vårt digitale bookingsystem.
         Velg tidspunktet som passer for deg, og få bekreftelse umiddelbart.
       </p>
-
+      
+      {/* Hvis du bruker en ekstern lenke til MakePlans: */}
       <a
         href="https://smarthealthbydraicha.makeplans.com"
-        style={{
-          display: "inline-block",
-          backgroundColor: "#0077B6",
-          color: "white",
-          padding: "14px 28px",
-          borderRadius: "8px",
-          textDecoration: "none",
-          fontSize: "1.2rem",
-          fontWeight: "bold",
-        }}
+        className="primary-button large-button" // Bruk CSS-klasser for stil
+        target="_blank" // Anbefalt: Åpne ekstern booking i et nytt vindu
+        rel="noopener noreferrer"
       >
         Gå til timebestilling
       </a>
+      
+      <p className="booking-contact-note">
+        *Ring oss på [Ditt telefonnummer] ved akutte henvendelser.
+      </p>
     </main>
   );
 }
