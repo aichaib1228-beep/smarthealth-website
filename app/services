@@ -1,0 +1,45 @@
+export default function Services() {
+  return (
+    <div style={{ maxWidth: "1100px", margin: "40px auto", padding: "20px" }}>
+      <h1
+        style={{
+          fontSize: "2rem",
+          fontWeight: "bold",
+          color: "#0077B6",
+          marginBottom: "20px",
+        }}
+      >
+        Tjenester
+      </h1>
+
+      <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#444" }}>
+        Jeg tilbyr moderne og helhetlige allmennlegetjenester med fokus på
+        kvinnehelse, allergier, hormoner og livsstil.
+      </p>
+
+      <ul style={{ marginTop: "20px", fontSize: "1.1rem", lineHeight: "1.8" }}>
+        <li>Allmennlegekonsultasjon</li>
+        <li>Kvinnehelse & hormoner</li>
+        <li>Allergi & astma utredning</li>
+        <li>Vekt, livsstil og ernæring</li>
+        <li>Blodprøver & medisinske vurderinger</li>
+      </ul>
+
+      <a
+        href="https://smarthealthbydraicha.makeplans.com"
+        style={{
+          display: "inline-block",
+          marginTop: "25px",
+          padding: "12px 20px",
+          backgroundColor: "#0077B6",
+          color: "white",
+          textDecoration: "none",
+          borderRadius: "6px",
+          fontWeight: "bold",
+        }}
+      >
+        Bestill time
+      </a>
+    </div>
+  );
+}
