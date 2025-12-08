@@ -1,72 +1,39 @@
 import "./globals.css";
+// Importer Link fra Next.js for bedre ytelse og client-side navigasjon
+import Link from 'next/link'; 
 
 export const metadata = {
-  title: "SmartHealth by Dr. Aicha",
+  title: "SmartHealth by Dr. Aicha – Privat allmennlege i Oslo Sentrum", // Forbedret tittel for SEO
   description: "Privat allmennlege i Oslo – kvinnehelse, hormoner, allergi og moderne helsetjenester.",
 };
 
 export default function RootLayout({ children }) {
+  // VIKTIG FIKS: Legg navStyle inn som CSS-klasser
   return (
     <html lang="no">
-      <body
-        style={{
-          fontFamily: "Arial, sans-serif",
-          margin: 0,
-          padding: 0,
-          backgroundColor: "#FFFFFF",
-          color: "#333",
-        }}
-      >
+      <body className="root-body">
         {/* HEADER */}
-        <header
-          style={{
-            backgroundColor: "#FFFFFF",
-            borderBottom: "3px solid #0077B6",
-            padding: "15px 20px",
-            position: "sticky",
-            top: 0,
-            zIndex: 1000,
-          }}
-        >
-          <div
-            style={{
-              maxWidth: "1100px",
-              margin: "0 auto",
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "center",
-            }}
-          >
+        <header className="main-header">
+          <div className="container header-content">
             {/* Logo / Brand */}
-            <a
-              href="/"
-              style={{
-                fontSize: "1.6rem",
-                fontWeight: "bold",
-                color: "#0077B6",
-                textDecoration: "none",
-              }}
-            >
+            <Link href="/" className="logo-link">
               SmartHealth
-            </a>
+            </Link>
 
             {/* Meny */}
-            <nav style={{ display: "flex", gap: "20px" }}>
-              <a href="/" style={navStyle}>Hjem</a>
-              <a href="/about" style={navStyle}>Om</a>
-              <a href="/services" style={navStyle}>Tjenester</a>
-              <a href="/contact" style={navStyle}>Kontakt</a>
+            <nav className="main-nav">
+              {/* Bruk Link for intern navigasjon */}
+              <Link href="/" className="nav-link">Hjem</Link>
+              <Link href="/about" className="nav-link">Om</Link>
+              <Link href="/services" className="nav-link">Tjenester</Link>
+              <Link href="/contact" className="nav-link">Kontakt</Link>
 
+              {/* Ekstern lenke til Booking (CTA) */}
               <a
                 href="https://smarthealthbydraicha.makeplans.com"
-                style={{
-                  padding: "8px 14px",
-                  backgroundColor: "#0077B6",
-                  color: "#fff",
-                  borderRadius: "6px",
-                  textDecoration: "none",
-                  fontWeight: "bold",
-                }}
+                className="primary-button nav-cta"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 Bestill time
               </a>
@@ -75,53 +42,35 @@ export default function RootLayout({ children }) {
         </header>
 
         {/* Sideinnhold */}
-        <main style={{ minHeight: "70vh", paddingTop: "20px" }}>
+        <main className="content-area">
           {children}
         </main>
 
         {/* FOOTER */}
-        <footer
-          style={{
-            backgroundColor: "#F9F4EF",
-            padding: "40px 20px",
-            marginTop: "40px",
-            borderTop: "3px solid #0077B6",
-          }}
-        >
-          <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
-            <h3 style={{ color: "#0077B6", marginBottom: "10px" }}>
+        <footer className="main-footer">
+          <div className="container footer-content">
+            <h3 className="footer-title">
               SmartHealth by Dr. Aicha
             </h3>
 
-            <p>
+            {/* Kontaktinformasjon i footer - Bra for SEO/lokalisering */}
+            <p className="footer-details">
               Stensgata 2, 0358 Oslo <br />
-              Telefon: 97 25 20 42 <br />
-              E-post: info@draicha.no
+              Telefon: <a href="tel:+4797252042" className="footer-link">97 25 20 42</a> <br />
+              E-post: <a href="mailto:info@draicha.no" className="footer-link">info@draicha.no</a>
             </p>
 
+            {/* Footer CTA */}
             <a
               href="https://smarthealthbydraicha.makeplans.com"
-              style={{
-                display: "inline-block",
-                marginTop: "15px",
-                backgroundColor: "#0077B6",
-                color: "white",
-                padding: "12px 20px",
-                borderRadius: "6px",
-                textDecoration: "none",
-                fontWeight: "bold",
-              }}
+              className="primary-button footer-cta"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Bestill time
             </a>
 
-            <p
-              style={{
-                marginTop: "20px",
-                fontSize: "0.9rem",
-                color: "#777",
-              }}
-            >
+            <p className="copyright-text">
               © {new Date().getFullYear()} SmartHealth by Dr. Aicha – Alle rettigheter forbeholdt.
             </p>
           </div>
@@ -130,10 +79,4 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
-
-const navStyle = {
-  color: "#0077B6",
-  textDecoration: "none",
-  fontWeight: "bold",
-  fontSize: "1rem",
-};
+// navStyle-variabelen er ikke lenger nødvendig da den erstattes av CSS-klasser.
