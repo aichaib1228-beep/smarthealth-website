@@ -1,61 +1,40 @@
+// Gitt at du bruker Next.js, bruker vi <Link> for bedre ytelse
+import Link from 'next/link';
+
 export default function Home() {
   return (
     <main>
-
       {/* HERO SECTION */}
-      <section
-        style={{
-          padding: "60px 20px",
-          backgroundColor: "#FFFFFF",
-          borderBottom: "4px solid #0077B6",
-        }}
-      >
-        <div style={{ maxWidth: "900px", margin: "0 auto" }}>
-          <h1 style={{ fontSize: "2.4rem", color: "#0077B6" }}>
+      <section className="hero-section">
+        <div className="container">
+          {/* H1-taggen er optimal for SEO med klinikkens navn */}
+          <h1 className="hero-title">
             SmartHealth by Dr. Aicha
           </h1>
 
-          <p
-            style={{
-              fontSize: "1.3rem",
-              marginTop: "10px",
-              marginBottom: "25px",
-              color: "#333",
-              lineHeight: "1.6",
-            }}
-          >
-            Kvinnehelse • allergi • hormoner • allmennmedisin  
+          <p className="hero-tagline">
+            Kvinnehelse • allergi • hormoner • allmennmedisin
             <br />
             En moderne og varm privatklinikk i hjertet av Oslo.
           </p>
-
-          <a
-            href="https://smarthealthbydraicha.makeplans.com"
-            style={{
-              backgroundColor: "#0077B6",
-              color: "white",
-              padding: "14px 26px",
-              borderRadius: "6px",
-              textDecoration: "none",
-              fontSize: "1.1rem",
-              fontWeight: "bold",
-            }}
-          >
+          
+          {/* Bruk <Link> for intern navigasjon hvis booking er på en annen side i appen */}
+          <Link href="/booking" className="primary-button">
             Bestill time
-          </a>
+          </Link>
+          
+          {/* Hvis det er en ekstern lenke til MakePlans: */}
+          {/* <a href="https://smarthealthbydraicha.makeplans.com" className="primary-button">
+            Bestill time
+          </a> */}
         </div>
       </section>
 
       {/* WARM WELCOME SECTION */}
-      <section
-        style={{
-          padding: "50px 20px",
-          backgroundColor: "#F9F4EF",
-        }}
-      >
-        <div style={{ maxWidth: "900px", margin: "0 auto" }}>
-          <h2 style={{ color: "#444" }}>Velkommen til SmartHealth</h2>
-          <p style={{ fontSize: "1.1rem", lineHeight: "1.8", marginTop: "12px" }}>
+      <section className="welcome-section">
+        <div className="container">
+          <h2 className="section-heading">Velkommen til SmartHealth</h2>
+          <p className="welcome-text">
             Jeg tilbyr moderne, kunnskapsbasert og personlig legehjelp
             med god tid og fokus på trygghet og individuell behandling.
             <br />
@@ -65,16 +44,11 @@ export default function Home() {
       </section>
 
       {/* SERVICES SECTION */}
-      <section
-        style={{
-          padding: "50px 20px",
-          backgroundColor: "white",
-        }}
-      >
-        <div style={{ maxWidth: "900px", margin: "0 auto" }}>
-          <h2 style={{ color: "#0077B6" }}>Tjenester</h2>
+      <section className="services-section">
+        <div className="container">
+          <h2 className="section-heading primary-color">Tjenester</h2>
 
-          <ul style={{ fontSize: "1.1rem", lineHeight: "2", marginTop: "10px" }}>
+          <ul className="service-list">
             <li>Kvinnehelse & overgangsalder</li>
             <li>Stoffskifte & hormonelle plager</li>
             <li>Allergi & astma</li>
@@ -83,7 +57,6 @@ export default function Home() {
           </ul>
         </div>
       </section>
-
     </main>
   );
 }
