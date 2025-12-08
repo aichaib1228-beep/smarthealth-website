@@ -248,3 +248,13 @@ a {
     font-size: 1.6rem;
   }
 }
+/* === CONTACT PAGE === */
+
+.contact-page {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.contact-title {
+  font-size
