@@ -1,45 +1,47 @@
-export default function Services() {
-  return (
-    <div style={{ maxWidth: "1100px", margin: "40px auto", padding: "20px" }}>
-      <h1
-        style={{
-          fontSize: "2rem",
-          fontWeight: "bold",
-          color: "#0077B6",
-          marginBottom: "20px",
-        }}
-      >
-        Tjenester
-      </h1>
+/* SERVICES PAGE */
+.services-page {
+  padding: 40px 20px;
+}
 
-      <p style={{ fontSize: "1.1rem", lineHeight: "1.7", color: "#444" }}>
-        Jeg tilbyr moderne og helhetlige allmennlegetjenester med fokus på
-        kvinnehelse, allergier, hormoner og livsstil.
-      </p>
+.services-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
 
-      <ul style={{ marginTop: "20px", fontSize: "1.1rem", lineHeight: "1.8" }}>
-        <li>Allmennlegekonsultasjon</li>
-        <li>Kvinnehelse & hormoner</li>
-        <li>Allergi & astma utredning</li>
-        <li>Vekt, livsstil og ernæring</li>
-        <li>Blodprøver & medisinske vurderinger</li>
-      </ul>
+.services-title {
+  font-size: 2.2rem;
+  color: var(--primary-color, #0077B6);
+  font-weight: 700;
+  margin-bottom: 20px;
+}
 
-      <a
-        href="https://smarthealthbydraicha.makeplans.com"
-        style={{
-          display: "inline-block",
-          marginTop: "25px",
-          padding: "12px 20px",
-          backgroundColor: "#0077B6",
-          color: "white",
-          textDecoration: "none",
-          borderRadius: "6px",
-          fontWeight: "bold",
-        }}
-      >
-        Bestill time
-      </a>
-    </div>
-  );
+.services-intro {
+  font-size: 1.15rem;
+  color: #444;
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+
+.services-list {
+  margin: 20px 0 30px;
+  padding-left: 20px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+.services-cta {
+  display: inline-block;
+  background-color: var(--primary-color, #0077B6);
+  padding: 12px 22px;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 119, 182, 0.3);
+  transition: 0.2s ease-in-out;
+}
+
+.services-cta:hover {
+  background-color: #005f8d;
 }
