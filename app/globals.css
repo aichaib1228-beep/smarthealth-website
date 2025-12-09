@@ -248,6 +248,7 @@ a {
     font-size: 1.6rem;
   }
 }
+
 /* === CONTACT PAGE === */
 
 .contact-page {
@@ -257,5 +258,9 @@ a {
 }
 
 .contact-title {
-  font-size
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 20px;
+  text-align: center;
 }
