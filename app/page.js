@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 
 export default function Home() {
   return (
@@ -21,25 +20,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* DOCTOR IMAGE SECTION */}
-      <section className="doctor-intro-section">
-        <div className="doctor-intro-container">
-          <div className="doctor-image-wrapper">
-            <Image
-              src="/doctor-1.png"
-              alt="Dr. Aicha i konsultasjon"
-              width={500}
-              height={500}
-              className="doctor-intro-image"
-            />
-          </div>
-          <p className="doctor-intro-text">
-            Vår klinikk ligger sentralt plassert midt i Oslo sentrum med enkel og lett tilgang, 
-            ideelt for deg som søker helsetjenester i byen.
-          </p>
-        </div>
-      </section>
-
       {/* MAIN CONTENT SECTION */}
       <section className="main-content-section">
         <div className="content-grid">
@@ -53,7 +33,7 @@ export default function Home() {
               </p>
               <ul className="info-list">
                 <li>Vi tilbyr Drop-in timer og time på dagen uten lange ventetider.</li>
-                <li>Du kan kontakte oss via e-post: <a href="mailto:info@draicha.no" className="text-link"></a></li>
+                <li>Du kan kontakte oss via e-post: <a href="mailto:info@draicha.no" className="text-link">kontakt@smarthealthbydraicha.no</a></li>
                 <li>SMS på <a href="sms:+4797252042" className="text-link">97 25 20 42</a></li>
                 <li>Hvis det haster, ring <a href="tel:+4797252042" className="text-link">97 25 20 42</a></li>
               </ul>
@@ -91,9 +71,9 @@ export default function Home() {
           <div className="about-text-column">
             <h2 className="section-title-home">Om SmartHealth</h2>
             <p className="about-paragraph">
-              SmartHealth er et helsekonsept som er mer enn bare en klinikk – det er et 
-              hjerteprosjekt skapt ut fra et dypt ønske om å tilby profesjonell, personlig 
-              og moderne helsehjelp.
+              SmartHealthe er et helsevisjon er mer enn bare en klinikk – det er et hjerteprosjekt skapt ut fra et dypt ønske om å tilby profesjonell helsehjelp som virkelig utgjør en forskjell.
+Vårt arbeid bygger på troen om at de beste helseresultatene oppnås når legen og pasienten er et team. Hos oss er din helse et samarbeidsprosjekt.
+Vi går bokstavelig talt hånd i hånd med deg gjennom dine helseutfordringer, slik at du blir en aktiv deltaker i din egen bedring og varige mestring.
             </p>
             <p className="about-paragraph">
               Vårt arbeid bygger på troen om at god helse handler om mer enn bare rask 
@@ -116,7 +96,7 @@ export default function Home() {
 
             <div className="service-item-home">
               <h4>Tilgjengelighet og mer Tid</h4>
-              <p>Lengre tid enn 15 minutter – 30 min eller 45 min for grundig samtale.</p>
+              <p>Eller tiden du bestemmer å få 15 minutter – 30 min eller 45 min for grundig samtale.</p>
             </div>
 
             <div className="service-item-home">
@@ -126,18 +106,10 @@ export default function Home() {
 
             <div className="service-item-home">
               <h4>Sammenhengende Kontakt</h4>
-              <p>Oppnå trygghet og stabilitet med en fast lege som kjenner deg og din historikk.</p>
+              <p>Oppnå trygghet og stabilitet med en lege som kjenner deg og din historikk.</p>
             </div>
 
-            <div className="doctor-image-bottom">
-              <Image
-                src="/doctor-2.png"
-                alt="Dr. Aicha ved datamaskinen"
-                width={400}
-                height={400}
-                className="doctor-bottom-image"
-              />
-            </div>
+
           </div>
         </div>
       </section>
