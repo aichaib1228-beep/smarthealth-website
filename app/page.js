@@ -53,7 +53,7 @@ export default function Home() {
               </p>
               <ul className="info-list">
                 <li>Vi tilbyr Drop-in timer og time på dagen uten lange ventetider.</li>
-                <li>Du kan kontakte oss via e-post: <a href="mailto:kontakt@smarthealthbydraicha.no" className="text-link">kontakt@smarthealthbydraicha.no</a></li>
+                <li>Du kan kontakte oss via e-post: <a href="mailto:info@draicha.no" className="text-link"></a></li>
                 <li>SMS på <a href="sms:+4797252042" className="text-link">97 25 20 42</a></li>
                 <li>Hvis det haster, ring <a href="tel:+4797252042" className="text-link">97 25 20 42</a></li>
               </ul>
