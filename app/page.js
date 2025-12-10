@@ -9,7 +9,7 @@ export default function Home() {
         <div className="hero-content-home">
           <h1 className="hero-title-home">
             Velkommen til SmartHealth
-            <br /> {/* BRUKER <br /> FOR Å KONTROLLERE LINJESKIFTET */}
+            <br />
             by Dr. Aicha
           </h1>
           <p className="hero-subtitle-home">
@@ -81,9 +81,9 @@ export default function Home() {
             </p>
           </div>
 
-          {/* SERVICES COLUMN - NÅ KUN MED GRUNNLEGGENDE INFO FOR Å UNNGÅ DUPLIKATER */}
+          {/* SERVICES COLUMN - NÅ MED ALLE DETALJER IGJEN */}
           <div className="services-column">
-            <h3 className="services-title-home">Våre Grunnleggende Tjenester</h3>
+            <h3 className="services-title-home">Våre Spesialiteter og Tjenester</h3>
             
             <div className="service-item-home">
               <h4>Personlig helsehjelp</h4>
@@ -104,54 +104,26 @@ export default function Home() {
               <h4>Skreddersydde Planer</h4>
               <p>Hver pasient får en individuell behandlingsplan og oppfølging.</p>
             </div>
-            {/* MER SPESIFIKKE TJENESTER ER FLYTTET TIL FOCUS SECTION */}
-          </div>
-        </div>
-      </section>
-      
-      {/* NY SEKSJON: FOCUS SECTION - 'Hva jeg fokuserer på som lege' */}
-      <section className="focus-section-home">
-        <div className="focus-header">
-          <p className="focus-subtitle">Min Tilnærming og Ekspertise</p>
-          <h2 className="focus-title">Hva jeg fokuserer på som lege</h2>
-          <p className="focus-description">Jeg kombinerer evidensbasert medisin med helhetlig fokus for å gi deg varige helseresultater.</p>
-        </div>
-        
-        <div className="focus-grid">
-          {/* Box 1 */}
-          <div className="focus-item-box">
-            <h4>Helhetlig Helsesjekk</h4>
-            <p>Fokus på livsstil og risikofaktorer. Vi setter konkrete mål for å optimalisere din fysiske og mentale velvære.</p>
-          </div>
+            
+            <div className="service-item-home">
+              <h4>Mestring av Kroniske Sykdommer</h4>
+              <p>Verktøy og veiledning for å leve bedre med kroniske lidelser. Vi fokuserer på livsstilsendringer som gir deg kontroll og økt livskvalitet.</p>
+            </div>
+            
+            <div className="service-item-home">
+              <h4>Allergi og Astma</h4>
+              <p>Grundig veiledning og behandling for å mestre allergisykdommer, astma og andre vanlige luftveisplager.</p>
+            </div>
 
-          {/* Box 2 */}
-          <div className="focus-item-box">
-            <h4>Mestring av Kroniske Sykdommer</h4>
-            <p>Veiledning og verktøy for å leve bedre med kroniske lidelser. Fokus på livsstilsendringer som gir deg økt livskvalitet.</p>
-          </div>
+            <div className="service-item-home">
+              <h4>Helse for Barn og Familie</h4>
+              <p>Støtte og veiledning til foreldre om barns kosthold, utvikling av sunne vaner og håndtering av ernæringsutfordringer.</p>
+            </div>
 
-          {/* Box 3 */}
-          <div className="focus-item-box">
-            <h4>Allergi og Astma</h4>
-            <p>Grundig veiledning og behandling for å mestre allergisykdommer, astma og andre vanlige luftveisplager.</p>
-          </div>
-
-          {/* Box 4 */}
-          <div className="focus-item-box">
-            <h4>Råd for Barn og Familie</h4>
-            <p>Støtte og veiledning til foreldre om barns kosthold, utvikling av sunne vaner og håndtering av ernæringsutfordringer.</p>
-          </div>
-
-          {/* Box 5 */}
-          <div className="focus-item-box">
-            <h4>Individuell Helse-Coaching</h4>
-            <p>Skreddersydd én-til-én coaching for å navigere helseutfordringer, håndtere stress, forbedre søvn og styrke din helse.</p>
-          </div>
-
-          {/* Box 6 */}
-          <div className="focus-item-box">
-            <h4>Vektreise & Varig Livsstilsendring</h4>
-            <p>Et helhetlig program for varig vektregulering. Vi kombinerer ernæring, aktivitetsplaner og motivasjon for å nå dine mål.</p>
+            <div className="service-item-home">
+              <h4>Vektreise & Varig Livsstilsendring</h4>
+              <p>Helhetlig program for vektregulering. Vi kombinerer ernæring, aktivitet og motivasjon for å hjelpe deg nå varige mål.</p>
+            </div>
           </div>
         </div>
       </section>
