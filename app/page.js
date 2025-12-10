@@ -2,138 +2,156 @@ import Link from "next/link";
 import Image from "next/image";
 
 export default function Home() {
-  const primaryColor = "#0077B6"; // SmartHealth blå
-
   return (
-    <main style={{ maxWidth: "1100px", margin: "0 auto", padding: "40px 20px" }}>
-      
-      {/* HERO */}
-      <section
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          marginBottom: "60px",
-          gap: "40px",
-        }}
-      >
-        <div style={{ maxWidth: "550px" }}>
-          <h1
-            style={{
-              fontSize: "3rem",
-              fontWeight: "bold",
-              color: primaryColor,
-              marginBottom: "20px",
-            }}
-          >
-            Din Privatlege i Oslo – Med God Tid
+    <div className="home-page">
+      {/* HERO SECTION */}
+      <section className="hero-section-home">
+        <div className="hero-content-home">
+          <h1 className="hero-title-home">
+            Velkommen til SmartHealth  
+
+            by Dr. Aicha
           </h1>
-
-          <p
-            style={{
-              fontSize: "1.2rem",
-              lineHeight: "1.6",
-              marginBottom: "30px",
-              color: "#444",
-            }}
-          >
-            SmartHealth by Dr. Aicha tilbyr helhetlige allmennlegetjenester.
-            Rask tilgang på utvidet konsultasjon og spesialistkompetanse innen
-            kvinnehelse, hormoner og allergi.
+          <p className="hero-subtitle-home">
+            Din Private allmennlege i Oslo Sentrum
           </p>
-
-          <Link
-            href="https://smarthealthbydraicha.makeplans.com"
-            style={{
-              display: "inline-block",
-              backgroundColor: primaryColor,
-              color: "white",
-              padding: "15px 30px",
-              borderRadius: "10px",
-              textDecoration: "none",
-              fontWeight: "bold",
-              fontSize: "1.1rem",
-              boxShadow: "0 4px 10px rgba(0, 119, 182, 0.4)",
-            }}
-          >
-            Bestill time nå (Rask tilgang)
-          </Link>
-        </div>
-
-        {/* HERO-BILDE */}
-        <div style={{ flexShrink: 0 }}>
-          <Image
-            src="/hero_doctor_consult.jpg"
-            alt="Dr. Aicha i konsultasjon"
-            width={450}
-            height={450}
-            style={{
-              borderRadius: "15px",
-              objectFit: "cover",
-              boxShadow: "0 10px 20px rgba(0,0,0,0.15)",
-            }}
-          />
+          <p className="hero-description-home">
+            Vi tilbyr helsetjenester og er en autorisert lege i Oslo.
+          </p>
         </div>
       </section>
 
-      {/* TJENESTER */}
-      <section
-        style={{
-          padding: "40px 0",
-          borderTop: "1px solid #eee",
-          marginTop: "40px",
-        }}
-      >
-        <h2
-          style={{
-            fontSize: "2rem",
-            color: primaryColor,
-            marginBottom: "20px",
-            textAlign: "center",
-          }}
-        >
-          Våre Spesialfelt
-        </h2>
+      {/* DOCTOR IMAGE SECTION */}
+      <section className="doctor-intro-section">
+        <div className="doctor-intro-container">
+          <div className="doctor-image-wrapper">
+            <Image
+              src="/doctor-1.png"
+              alt="Dr. Aicha i konsultasjon"
+              width={500}
+              height={500}
+              className="doctor-intro-image"
+            />
+          </div>
+          <p className="doctor-intro-text">
+            Vår klinikk ligger sentralt plassert midt i Oslo sentrum med enkel og lett tilgang, 
+            ideelt for deg som søker helsetjenester i byen.
+          </p>
+        </div>
+      </section>
 
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-around",
-            gap: "20px",
-            textAlign: "center",
-          }}
-        >
-          <div style={{ flex: 1, padding: "20px", backgroundColor: "#F4F7F9", borderRadius: "10px" }}>
-            <h3 style={{ fontSize: "1.3rem", color: primaryColor }}>Kvinnehelse & Hormoner</h3>
-            <p style={{ color: "#555" }}>Overgangsalder, PCOS og hormonell ubalanse.</p>
+      {/* MAIN CONTENT SECTION */}
+      <section className="main-content-section">
+        <div className="content-grid">
+          {/* LEFT COLUMN - BOOKING INFO */}
+          <div className="content-column">
+            <h2 className="column-title">Timebestilling</h2>
+            
+            <div className="info-box">
+              <p className="info-text">
+                <strong>Ved spørsmål eller timebestilling:</strong>
+              </p>
+              <ul className="info-list">
+                <li>Vi tilbyr Drop-in timer og time på dagen uten lange ventetider.</li>
+                <li>Du kan kontakte oss via e-post: <a href="mailto:kontakt@smarthealthbydraicha.no" className="text-link">kontakt@smarthealthbydraicha.no</a></li>
+                <li>SMS på <a href="sms:+4797252042" className="text-link">97 25 20 42</a></li>
+                <li>Hvis det haster, ring <a href="tel:+4797252042" className="text-link">97 25 20 42</a></li>
+              </ul>
+              <p className="info-note">
+                Jeg tilbyr flerspråklig kommunikasjon – på norsk, engelsk, spansk, somali og arabisk.
+              </p>
+            </div>
+
+            <Link href="/booking" className="cta-button-home">
+              Bestill time nå
+            </Link>
           </div>
 
-          <div style={{ flex: 1, padding: "20px", backgroundColor: "#F4F7F9", borderRadius: "10px" }}>
-            <h3 style={{ fontSize: "1.3rem", color: primaryColor }}>Allergi & Astma</h3>
-            <p style={{ color: "#555" }}>Diagnostikk og behandling av allergiske plager.</p>
-          </div>
-
-          <div style={{ flex: 1, padding: "20px", backgroundColor: "#F4F7F9", borderRadius: "10px" }}>
-            <h3 style={{ fontSize: "1.3rem", color: primaryColor }}>Utvidet Legetime</h3>
-            <p style={{ color: "#555" }}>30–60 min uten stress for grundig utredning.</p>
+          {/* RIGHT COLUMN - ABOUT SMARTHEALTH */}
+          <div className="content-column">
+            <h2 className="column-title">Hos SmartHealth</h2>
+            
+            <div className="info-box">
+              <p className="info-text">
+                Hos SmartHealth får du trygg medisinsk oppfølging, personlig veiledning og 
+                forebyggende helsehjelp for hele familien.
+              </p>
+              <ul className="feature-list">
+                <li>Individualisert medisinsk oppfølging og kontinuitet for å hjelpe deg å leve friskere, lengre og med mer energi.</li>
+                <li>En lege som lytter, bryr seg og følger deg opp både på klinikken og online.</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* LENKE TIL TJENESTER */}
-      <section style={{ textAlign: "center", marginTop: "40px" }}>
-        <Link
-          href="/services"
-          style={{
-            color: primaryColor,
-            textDecoration: "underline",
-            fontSize: "1.1rem",
-            fontWeight: "bold",
-          }}
-        >
-          Se full oversikt over alle tjenester →
+      {/* ABOUT SMARTHEALTH SECTION */}
+      <section className="about-smarthealth-section">
+        <div className="about-grid">
+          <div className="about-text-column">
+            <h2 className="section-title-home">Om SmartHealth</h2>
+            <p className="about-paragraph">
+              SmartHealth er et helsekonsept som er mer enn bare en klinikk – det er et 
+              hjerteprosjekt skapt ut fra et dypt ønske om å tilby profesjonell, personlig 
+              og moderne helsehjelp.
+            </p>
+            <p className="about-paragraph">
+              Vårt arbeid bygger på troen om at god helse handler om mer enn bare rask 
+              legging av pasienten og et team. Hos oss er din helse et samarbeidsprosjekt.
+            </p>
+            <p className="about-paragraph">
+              Vi gir bedre helse, både fysisk og mental. Vi kombinerer evidensbasert medisin 
+              med helsefremmende tillit, slik at du er en aktiv deltaker i din egen bedring 
+              og velvære.
+            </p>
+          </div>
+
+          <div className="services-column">
+            <h3 className="services-title-home">Våre Tjenester</h3>
+            
+            <div className="service-item-home">
+              <h4>Personlig helsehjelp</h4>
+              <p>Ingen fastsatte tider, god pris og innstilling til deg.</p>
+            </div>
+
+            <div className="service-item-home">
+              <h4>Tilgjengelighet og mer Tid</h4>
+              <p>Lengre tid enn 15 minutter – 30 min eller 45 min for grundig samtale.</p>
+            </div>
+
+            <div className="service-item-home">
+              <h4>Skreddersydde Planer</h4>
+              <p>Ingen pasienter er like, derfor får du en individuell behandlingsplan og oppfølging.</p>
+            </div>
+
+            <div className="service-item-home">
+              <h4>Sammenhengende Kontakt</h4>
+              <p>Oppnå trygghet og stabilitet med en fast lege som kjenner deg og din historikk.</p>
+            </div>
+
+            <div className="doctor-image-bottom">
+              <Image
+                src="/doctor-2.png"
+                alt="Dr. Aicha ved datamaskinen"
+                width={400}
+                height={400}
+                className="doctor-bottom-image"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA SECTION */}
+      <section className="cta-section-home">
+        <h2 className="cta-title-home">Klar til å ta kontroll over din helse?</h2>
+        <p className="cta-text-home">
+          Bestill din time i dag og opplev forskjellen med SmartHealth by Dr. Aicha.
+        </p>
+        <Link href="/booking" className="cta-button-large">
+          Bestill time nå
         </Link>
       </section>
-    </main>
+    </div>
   );
 }
